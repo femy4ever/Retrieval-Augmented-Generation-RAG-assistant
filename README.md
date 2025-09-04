@@ -49,6 +49,18 @@ This project is a **proof-of-concept implementation** of a personalized RAG chat
       +----------+----------+
                  |
                  v
+                 +---------------------+
+      |      User Chat      |
+      |  (Chainlit / UI)   |
+      +----------+----------+
+                 |
+                 v
+      +---------------------+
+      |     RAG Chatbot     |
+      |      (app.py)       |
+      +----------+----------+
+                 |
+                 v
 +----------------+----------------+
 | ChromaDB Vector Store<-> Gemini |
 |   Embedding (Ingest/manage_db)  |
