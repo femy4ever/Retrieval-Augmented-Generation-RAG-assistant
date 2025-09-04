@@ -1,5 +1,3 @@
-
-```markdown
 # Personalized RAG Assistant – Project Walkthrough
 
 This document details the development process, challenges, solutions, and future considerations for the **Personalized RAG Assistant**.
@@ -57,7 +55,7 @@ Create a **personalized, stack-agnostic RAG assistant** for local users, capable
 
 ---
 
-### Possible Stacks
+## Possible Stacks
 
 | Component | Current | Alternative / Scalable Option |
 |-----------|---------|-------------------------------|
@@ -70,9 +68,9 @@ Create a **personalized, stack-agnostic RAG assistant** for local users, capable
 
 ### Current vs Alternative
 
-#### Current Free-tier vs Paid Tier
+#### Free-tier vs Paid Tier
 
-| Component | Free Tier | Paid Tier / Pricing | Notes / Scaling |
+| Component | Current | Alternative / Pricing | Notes / Scaling |
 |-----------|-----------|-------------------|----------------|
 | **LLM Model** | Gemini AI: 50 requests/day per model | Gemini Paid: Higher quota (check Google Cloud pricing) | Can switch to OpenAI, Anthropic, or local models for unlimited or cheaper usage |
 | **Vector DB** | ChromaDB local: free | Cloud DBs: Pinecone, Milvus, Weaviate | Scales horizontally; supports millions of vectors |
@@ -121,7 +119,6 @@ It validates the core **ingestion → embedding → retrieval → generation** f
 
 ---
 
-
 ### Scaling Recommendations
 
 1. **Switch to a multi-LLM architecture**:
@@ -146,7 +143,7 @@ It validates the core **ingestion → embedding → retrieval → generation** f
 
 ### Summary
 
-This table and diagram help stakeholders quickly understand:
+This document and tables help stakeholders quickly understand:
 
 - Which components are **free-tier** vs **paid**.
 - Where **bottlenecks** or quota limits might appear.
