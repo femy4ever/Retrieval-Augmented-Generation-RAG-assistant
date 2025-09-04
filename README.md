@@ -1,5 +1,4 @@
 # Personalized RAG Assistant – MVP (Proof of Concept)
-
 **A local, personalized Retrieval-Augmented Generation (RAG) assistant for documents.**
 
 This project is a **proof-of-concept implementation** of a personalized RAG chatbot using **Google Gemini AI**, allowing local users to ingest PDFs, ask natural language questions, and get context-aware answers. The solution is designed to be **modular and stack-agnostic** for future expansion.
@@ -34,34 +33,6 @@ This project is a **proof-of-concept implementation** of a personalized RAG chat
 - Can be deleted to start a fresh session.
 
 ---
-
-## Architecture – Phase One
-
-```text
-        +---------------------+
-        |      User Chat      |
-        |  (Chainlit / UI)    |
-        +----------+----------+
-                   |
-                   v
-        +---------------------+
-        |     RAG Chatbot     |
-        |      (app.py)       |
-        +----------+----------+
-                   |
-                   v
-   +-------------------------------+
-   |   ChromaDB Vector Store       |
-   |   <--> Gemini Embeddings      |
-   |   (ingest.py / manage_db.py)  |
-   +---------------+---------------+
-                   |
-                   v
-        +---------------------+
-        |   LLM Model Layer   |
-        | (Gemini AI / Alt..) |
-        +---------------------+
-
 
 * **app.py:** Core chat logic, message handling, RAG query pipeline.
 * **ingest.py:** PDF ingestion, chunking, embedding generation.
@@ -136,12 +107,28 @@ Goal: Build a fully modular RAG framework that is interoperable across AI/embedd
 
 ---
 
-## Contribution
-
-Fork the repo and submit PRs. Suggested improvements:
-
-* Add support for multi-format documents.
-* Improve embedding efficiency.
-* Implement RAG for multiple LLMs.
-* Build automated tests for ingestion and retrieval.
+## Architecture – Phase One
 ```text
+        +---------------------+
+        |      User Chat      |
+        |  (Chainlit / UI)    |
+        +----------+----------+
+                   |
+                   v
+        +---------------------+
+        |     RAG Chatbot     |
+        |      (app.py)       |
+        +----------+----------+
+                   |
+                   v
+   +-------------------------------+
+   |   ChromaDB Vector Store       |
+   |   <--> Gemini Embeddings      |
+   |   (ingest.py / manage_db.py)  |
+   +---------------+---------------+
+                   |
+                   v
+        +---------------------+
+        |   LLM Model Layer   |
+        | (Gemini AI / Alt..) |
+        +---------------------+
