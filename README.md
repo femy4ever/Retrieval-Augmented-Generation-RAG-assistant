@@ -37,16 +37,28 @@ This project is a **proof-of-concept implementation** of a personalized RAG chat
 
 ## Architecture – Phase One
 
-        User <--> Chainlit Chat Interface
-                    |
-                    v
-            RAG Chatbot (app.py)
-                    |
-                    v
-    ChromaDB Vector Store <--> Gemini Embeddings
-                    |
-                    v
-                Gemini LLM
+      +---------------------+
+      |      User Chat      |
+      |  (Chainlit / UI)   |
+      +----------+----------+
+                 |
+                 v
+      +---------------------+
+      |     RAG Chatbot     |
+      |      (app.py)       |
+      +----------+----------+
+                 |
+                 v
++----------------+----------------+
+| ChromaDB Vector Store<-> Gemini |
+|   Embedding (Ingest/manage_db)  |
++----------------+----------------+
+                 |
+                 v
+       +---------------------+
+       |   LLM Model Layer   |
+       | (Gemini AI / Alt..) |
+       +---------------------+
 
 
 * **app.py:** Core chat logic, message handling, RAG query pipeline.
