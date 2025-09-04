@@ -74,31 +74,21 @@ This project is a **proof-of-concept implementation** of a personalized RAG chat
 ## Installation
 
 1.  Clone the repository:
-    ```bash
     git clone <repo-url>
     cd <repo-folder>
-    ```
 
 2.  Install dependencies:
-    ```bash
     pip install -r requirements.txt
-    ```
 
 3.  Set up environment variables:
-    * Create a `.env` file:
-    ```bash
+    Create a `.env` file:
     GEMINI_API_KEY=<your-google-gemini-api-key>
-    ```
 
 4.  Run the app:
-    ```bash
     chainlit run app.py
-    ```
 
 5.  Database management:
-    ```bash
     python manage_db.py
-    ```
 
 ## Usage
 
@@ -122,27 +112,27 @@ The next phase aims to make the RAG chatbot stack-agnostic, allowing it to:
 * Expand multi-modal input (PDF, DOCX, images, etc.).
 * Introduce role-based chat sessions, contextual memory, and fine-tuning options.
 
-**Goal:** Build a fully modular RAG framework that is interoperable across AI/embedding stacks without major code changes.
+Goal: Build a fully modular RAG framework that is interoperable across AI/embedding stacks without major code changes.
 
 ---
 
 ## Project Highlights
 
-* **MVP Focus:** Validate ingestion → embedding → retrieval → answer flow.
-* **Extensible:** Modular code in `ingest.py` and `app.py`.
-* **User-Friendly:** Simple commands and slider controls for customization.
-* **Reliable:** Handles quota, API, and database errors gracefully.
+* MVP Focus: Validate ingestion → embedding → retrieval → answer flow.
+* Extensible: Modular code in `ingest.py` and `app.py`.
+* User-Friendly: Simple commands and slider controls for customization.
+* Reliable: Handles quota, API, and database errors gracefully.
 
 ---
 
 ## Requirements
 
-* **Python 3.10+**
-* **Chainlit**
-* **PyPDF2**
-* **ChromaDB**
-* **LangChain**
-* **Google Gemini API key**
+* Python 3.10+
+* Chainlit
+* PyPDF2
+* ChromaDB
+* LangChain
+* Google Gemini API key
 
 ---
 
@@ -154,5 +144,4 @@ Fork the repo and submit PRs. Suggested improvements:
 * Improve embedding efficiency.
 * Implement RAG for multiple LLMs.
 * Build automated tests for ingestion and retrieval.
-
----
+```text
