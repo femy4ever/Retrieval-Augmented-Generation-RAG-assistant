@@ -1,0 +1,27 @@
+# ------------------------------
+# Python cache files
+# ------------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# ------------------------------
+# Virtual environment
+# ------------------------------
+stable-rag-env/
+
+# ------------------------------
+# Sensitive environment variables
+# ------------------------------
+.env
+
+# ------------------------------
+# Local database / vector store
+# ------------------------------
+database/
+
+# ------------------------------
+# Chainlit temporary files and configs
+# ------------------------------
+.chainlit/
